@@ -1,14 +1,14 @@
 
 User Stories--
 MVP
-
 I should be able to make a record for a show
 I should be able to break this show down into its beats
 I should be able to make notes for each beat
-I should be able to view public notes while being able to record my own public and private notes
+
 
 Silver
-I should be able to make notes for the show as a whole
+I should be able to view public notes while being able to record my own public and private notes
+I should be able to make notes for the show as a whole in addition to each beat
 I should be able to upload photos from the show
 I should be able to categorize my shows by team
 
@@ -19,3 +19,5 @@ As a coach, I should be able to view all players on a team and make notes for th
 
 Bonus features-
 Link to team website
+Include a ranking system
+Calendar for inputting dates
