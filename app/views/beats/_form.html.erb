@@ -1,0 +1,7 @@
+<%= form_for [@show,@beat] do |b|%>
+  <%=b.label :Title%>
+  <%=b.text_field :title%>
+  <%=b.label :Body %>
+  <%=b.text_field :body%>
+  <%= b.submit "End Beat" %>
+<% end %>

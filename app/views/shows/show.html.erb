@@ -1,2 +1,12 @@
-<h1>Shows#show</h1>
-<p>Find me in app/views/shows/show.html.erb</p>
+<h1><%= @show.title %></h1>
+<p><%=@show.body%></p>
+
+<%@show.beats.each do |beat| %>
+  <%=link_to "#{beat.title}", show_beat_path(@show,beat)%>
+  <%=beat.body%>
+<%end%>
+
+<%= link_to "Add Beat", new_show_beat_path(@show) %>
+
+<%= link_to "Edit show", edit_show_path(@show) %>
+<div class = "navLink"><%= link_to "Back to A ll Shows", shows_path %></div>

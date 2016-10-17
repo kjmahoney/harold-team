@@ -10,7 +10,7 @@ Show.destroy_all
 Beat.destroy_all
 Note.destroy_all
 
-testShow = Show.create(title:"Mall Jail Show", date:"Oct 14 2016", length:25, body: "A very good show" )
+testShow = Show.create(title:"Mall Show", date:"Oct 14 2016", length:25, body: "A very good show" )
 
 testBeat = Beat.create(title: "1A", body: "Well grounded and energetic")
 

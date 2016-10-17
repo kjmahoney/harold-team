@@ -2,6 +2,8 @@
 
 <% @shows.each do |s| %>
 
-<%=s.name%>
+<%=link_to "#{s.title}", s%>
 
 <% end %>
+
+<%= link_to "New Show", new_show_path %>

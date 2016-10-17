@@ -1,2 +1,8 @@
-<h1>Beats#edit</h1>
-<p>Find me in app/views/beats/edit.html.erb</p>
+<h1>Beats</h1>
+<%= render "form" %>
+
+<div class = "navLink"><%= link_to "Back to Show", show_path(@show) %></div>
+
+<%= form_for [@show,@beat], method: :delete, data: {confirm: "Are you sure?"} do |s|%>
+  <%= s.submit "Delete beat" %>
+<% end %>
