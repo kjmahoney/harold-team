@@ -5,7 +5,7 @@
 
   <ul>
 
-  <%=link_to "#{beat.title}", team_show_beat_path(@show,beat)%>
+  <%=link_to "#{beat.title}", team_show_beat_path(@team, @show,beat)%>
 
   <%beat.notes.each do |note| %>
     <li><%=note.body%></li>

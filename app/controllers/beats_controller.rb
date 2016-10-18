@@ -4,6 +4,7 @@ class BeatsController < ApplicationController
   end
 
   def show
+    @team = Team.find(params[:team_id])
     @show = Show.find(params[:show_id])
     @beat = Beat.find(params[:id])
   end
@@ -22,21 +23,25 @@ class BeatsController < ApplicationController
   end
 
   def edit
+    @team = Team.find(params[:team_id])
     @show = Show.find(params[:show_id])
     @beat = Beat.find(params[:id])
   end
 
   def update
+    @team = Team.find(params[:team_id])
     @show = Show.find(params[:show_id])
     @beat = Beat.find(params[:id])
     @beat.update!(beat_params)
-    redirect_to show_path(@show)
+    redirect_to team_show_path(@team, @show)
   end
 
   def destroy
+    @team = Team.find(params[:team_id])
+    @show = Show.find(params[:show_id])
     @beat= Beat.find(params[:id])
     @beat.destroy
-    redirect_to show_path(@show)
+    redirect_to team_show_path(@team, @show)
   end
 
 end

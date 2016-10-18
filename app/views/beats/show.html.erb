@@ -3,11 +3,11 @@
 
 <%@beat.notes.each do |note| %>
   <%= note.body %>
-  <%= link_to "Edit this Note", edit_show_beat_note_path(@show, @beat, note) %>
+  <%= link_to "Edit this Note", edit_team_show_beat_note_path(@team, @show, @beat, note) %>
 <%end%>
 
-<p><%= link_to "Add note", new_show_beat_note_path(@show,@beat,@path) %></p>
+<p><%= link_to "Add note", new_team_show_beat_note_path(@team, @show,@beat,@path) %></p>
 
-<p><%= link_to "Edit this Beat", edit_show_beat_path(@show , @beat) %></p>
+<p><%= link_to "Edit this Beat", edit_team_show_beat_path(@team, @show , @beat) %></p>
 
-<div class = "navLink"><%= link_to "Back to Show", show_path(@show) %></div>
+<div class = "navLink"><%= link_to "Back to Show", team_show_path(@team, @show) %></div>

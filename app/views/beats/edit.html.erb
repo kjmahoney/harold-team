@@ -3,6 +3,6 @@
 
 <div class = "navLink"><%= link_to "Back to Show", team_show_path(@team, @show) %></div>
 
-<%= form_for [@show,@beat], method: :delete, data: {confirm: "Are you sure?"} do |s|%>
+<%= form_for [@team, @show,@beat], method: :delete, data: {confirm: "Are you sure?"} do |s|%>
   <%= s.submit "Delete beat" %>
 <% end %>
