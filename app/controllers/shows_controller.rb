@@ -5,7 +5,8 @@ class ShowsController < ApplicationController
 
   def show
     @show =Show.find(params[:id])
-    @beat =Show.where(:show_id => @show.id)
+    @beat =Beat.where(:show_id => @show.id)
+    @note = Note.where(:beat_id => @beat.ids)
   end
 
   def new
