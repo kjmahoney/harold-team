@@ -2,6 +2,6 @@
   <%=b.label :Body%>
   <%=b.text_field :body%>
   <%=b.label :Private? %>
-  <%=b.text_field :private%>
+  <%=b.check_box(:private)%>
   <%= b.submit "Done" %>
 <% end %>

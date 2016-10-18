@@ -3,10 +3,10 @@
 
 <%@show.beats.each do |beat| %>
   <%=link_to "#{beat.title}", show_beat_path(@show,beat)%>
-  <!-- <%#=beat.notes.body%> -->
+  <%#=beat.notes.body%>
 <%end%>
 
-<%= link_to "Add Beat", new_show_beat_path(@show) %>
+<p><%= link_to "Add Beat", new_show_beat_path(@show) %></p>
 
-<%= link_to "Edit show", edit_show_path(@show) %>
+<p><%= link_to "Edit show", edit_show_path(@show) %></p>
 <div class = "navLink"><%= link_to "Back to A ll Shows", shows_path %></div>
