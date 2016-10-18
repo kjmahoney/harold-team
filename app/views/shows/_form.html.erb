@@ -1,4 +1,4 @@
-<%= form_for @show do |s|%>
+<%= form_for [@team, @show] do |s|%>
   <%=s.label :Title%>
   <%=s.text_field :title%>
   <%=s.label :Date %>

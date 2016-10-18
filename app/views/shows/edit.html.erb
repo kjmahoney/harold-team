@@ -2,8 +2,8 @@
 <%= render "form"%>
 
 
-<%= form_for [@show], method: :delete, data: {confirm: "Are you sure?"} do |s|%>
+<%= form_for [@team, @show], method: :delete, data: {confirm: "Are you sure?"} do |s|%>
   <%= s.submit "Delete show" %>
 <% end %>
 
-<div class = "navLink"><%= link_to "Back", show_path(@show) %></div>
+<div class = "navLink"><%= link_to "Back", team_show_path(@team, @show) %></div>

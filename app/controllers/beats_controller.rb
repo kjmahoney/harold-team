@@ -9,14 +9,16 @@ class BeatsController < ApplicationController
   end
 
   def new
+    @team = Team.find(params[:team_id])
     @show = Show.find(params[:show_id])
     @beat = Beat.new
   end
 
   def create
+    @team = Team.find(params[:team_id])
     @show = Show.find(params[:show_id])
     @beat =@show.beats.create!(beat_params)
-    redirect_to show_path(@show)
+    redirect_to team_show_path(@team, @show)
   end
 
   def edit

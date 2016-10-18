@@ -5,7 +5,7 @@
 
   <ul>
 
-  <%=link_to "#{beat.title}", show_beat_path(@show,beat)%>
+  <%=link_to "#{beat.title}", team_show_beat_path(@show,beat)%>
 
   <%beat.notes.each do |note| %>
     <li><%=note.body%></li>
@@ -14,9 +14,7 @@
 <%end%>
 
 
+<p><%= link_to "Add Beat", new_team_show_beat_path(@team, @show) %></p>
 
-
-<p><%= link_to "Add Beat", new_show_beat_path(@show) %></p>
-
-<p><%= link_to "Edit show", edit_show_path(@show) %></p>
-<div class = "navLink"><%= link_to "Back to A ll Shows", shows_path %></div>
+<p><%= link_to "Edit show", edit_team_show_path(@team, @show) %></p>
+<div class = "navLink"><%= link_to "Back to A ll Shows", team_shows_path %></div>

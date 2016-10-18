@@ -1,0 +1,9 @@
+<h1>My Teams</h1>
+
+<%@teams.each do |t|%>
+
+<%=link_to "#{t.name}", team_path(t)%>
+
+<% end %>
+
+<div class = "addLink"><%= link_to "Add Team", new_team_path %></div>
