@@ -4,17 +4,25 @@ MVP
 I should be able to make a record for a show
 I should be able to break this show down into its beats
 I should be able to make notes for each beat
-
+I should be able to view public notes while being able to record my own public and private notes
+(Users only have many notes )
 
 Silver
-I should be able to view public notes while being able to record my own public and private notes
+
 I should be able to make notes for the show as a whole in addition to each beat
 I should be able to upload photos from the show
 I should be able to categorize my shows by team
 
+(A team will have many users, and a user will have many teams)
+
+
+
 Gold
 
-As a coach, I should be able to view all players on a team and make notes for them
+As a coach, I should be able to view all players on a team and make notes for them, also track attendance at shows and see who
+was in which beat
+(Will require a new table of players with a many to many relationship with shows and beats)
+(Question whether to make users )
 
 
 Bonus features-

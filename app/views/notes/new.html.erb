@@ -1,2 +1,4 @@
-<h1>Notes#new</h1>
-<p>Find me in app/views/notes/new.html.erb</p>
+<h1>New note for<%= @beat.title %></h1>
+<%= render "form" %>
+
+<div class = "navLink"><%= link_to "Back to Show", show_beat_path(@show, @beat) %></div>

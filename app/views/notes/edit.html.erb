@@ -1,2 +1,10 @@
-<h1>Notes#edit</h1>
-<p>Find me in app/views/notes/edit.html.erb</p>
+<h1>Edit note for<%= @beat.title %></h1>
+
+<%= render "form" %>
+
+
+<%= form_for [@show, @beat, @note], method: :delete, data: {confirm: "Are you sure?"} do |n|%>
+  <%= n.submit "Delete note" %>
+<% end %>
+
+<div class = "navLink"><%= link_to "Back to Show", show_beat_path(@show, @beat) %></div>

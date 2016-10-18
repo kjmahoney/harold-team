@@ -3,7 +3,7 @@
 
 <%@show.beats.each do |beat| %>
   <%=link_to "#{beat.title}", show_beat_path(@show,beat)%>
-  <%=beat.body%>
+  <!-- <%#=beat.notes.body%> -->
 <%end%>
 
 <%= link_to "Add Beat", new_show_beat_path(@show) %>

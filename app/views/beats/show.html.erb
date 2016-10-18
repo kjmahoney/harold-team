@@ -1,6 +1,15 @@
 <h1><%=@beat.title %></h1>
-<p><%= @beat.body %></p>
+<p><%=@beat.body %></p>
 
-<%= link_to "Edit this Beat", edit_show_beat_path(@show, @beat) %>
+<%@beat.notes.each do |note| %>
+  <%= note.body %>
+  <%= link_to "Edit this Note", edit_show_beat_note_path(@show, @beat, note) %>
+<%end%>
+
+<p><%= link_to "Add note", new_show_beat_note_path(@show,@beat,@path) %></p>
+
+<p><%= link_to "Edit this Beat", edit_show_beat_path(@show , @beat) %></p>
+
+
 
 <div class = "navLink"><%= link_to "Back to Show", show_path(@show) %></div>

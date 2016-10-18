@@ -25,8 +25,10 @@ class BeatsController < ApplicationController
   end
 
   def update
+    @show = Show.find(params[:show_id])
     @beat = Beat.find(params[:id])
     @beat.update!(beat_params)
+    redirect_to show_path(@show)
   end
 
   def destroy

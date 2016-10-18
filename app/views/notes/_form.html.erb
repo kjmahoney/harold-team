@@ -1,0 +1,7 @@
+<%= form_for [@show,@beat,@note] do |b|%>
+  <%=b.label :Body%>
+  <%=b.text_field :body%>
+  <%=b.label :Private? %>
+  <%=b.text_field :private%>
+  <%= b.submit "Done" %>
+<% end %>
