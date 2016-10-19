@@ -1,0 +1,15 @@
+<h1>Memberships#create</h1>
+
+<%= form_for [@team, @show] do |s|%>
+  <%=s.label :Title%>
+  <%=s.text_field :title%>
+  <%=s.label :Date %>
+  <%=s.text_field :date%>
+
+
+
+
+  <p>
+  <%= f.label :prospect %><br />
+  <%= f.collection_select :prospect_id, @myprospects, :id, :name, :prompt => "Select a prospect" %>
+</p>

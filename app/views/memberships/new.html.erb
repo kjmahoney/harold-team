@@ -1,0 +1,13 @@
+<h1>New Membership</h1>
+<%= form_for @membership do |s|%>
+  <%=s.label :user_ID%>
+  <%=s.text_field :user_id%>
+  <%=s.label :Select_Team %>
+  <%=s.collection_select :team_id, @teams, :id, :name%>
+  <%=s.submit "Create membership" %>
+<% end %>
+
+
+
+f.label :prospect %>
+f.collection_select :prospect_id, @myprospects, :id, :name, :prompt => "Select a prospect"
