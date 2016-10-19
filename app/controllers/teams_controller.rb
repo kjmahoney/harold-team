@@ -5,6 +5,7 @@ class TeamsController < ApplicationController
 
   def show
     @team =Team.find(params[:id])
+    @membership =Membership.where(:team_id => @team.id)
     @shows = Show.where(:team_id => @team.id)
   end
 
