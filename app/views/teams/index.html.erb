@@ -1,8 +1,12 @@
 <h1>My Teams</h1>
 
+
 <%@teams.each do |t|%>
 
-<%=link_to "#{t.name}", team_path(t)%>
+<ul>
+  <%=link_to "#{t.name}", team_path(t)%>
+</ul>
+
 
 <% end %>
 

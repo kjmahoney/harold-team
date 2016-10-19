@@ -9,13 +9,12 @@
   </head>
 
   <body>
-      <!-- <img id ="background-img" src="http://www.improv-odyssey.com/wp-content/uploads/2012/11/background2.jpg" alt="background" /> -->
+      <img id ="background-img" src="http://www.clipartkid.com/images/513/index-of-blog-wp-content-uploads-2008-04-8UnebP-clipart.jpg" />
+
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+
     <nav>
-
-    </nav>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
     <% if !current_user %>
       <%= link_to "Sign up", new_user_registration_path  %>
       <%= link_to "Sign in", new_user_session_path %>
@@ -23,6 +22,7 @@
       <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
       <%current_user.email%>
     <%end%>
+    </nav>
 
     <%= yield %>
 

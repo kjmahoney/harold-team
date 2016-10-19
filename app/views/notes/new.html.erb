@@ -1,4 +1,5 @@
-<h1>New note for<%= @beat.title %></h1>
-<%= render "form" %>
-
-<div class = "navLink"><%= link_to "Back to Show", team_show_beat_path(@team, @show, @beat) %></div>
+<div class = "longList">
+<h1>New note for <%= @beat.title %></h1>
+<div><%= render "form" %></div>
+<div class = "bottomNav"><%= link_to "Back to Show", team_show_beat_path(@team, @show, @beat) %></div>
+</div>

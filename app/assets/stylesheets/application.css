@@ -1,15 +1,27 @@
 body{
   text-align: center;
   background-color: white;
-  color: black;
+  color: white;
+  font-family: Chalkboard;
 }
 
 a{
-  color: black;
+  color: white;
 }
 
 a:hover{
   color: red;
+}
+
+ul{
+  padding: 0;
+  list-style: none;
+}
+
+nav{
+  background-color: black;
+  display: flex;
+  align-items: flex-start;
 }
 
 #background-img{
@@ -20,6 +32,73 @@ a:hover{
   left: 0px;
   top: 0px;
 }
+
+.bottomNav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+
+.bottomNav > div{
+  margin: 15px 15px 5px 15px;;
+}
+
+.longList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.longList>div{
+  margin: 5px 0px 5px 0px;
+}
+
+.longList>div>div>li{
+  list-style: disc;
+  text-align: center;
+  margin: 15px 0px 15px 0px;
+}
+
+.listTitle{
+  font-size: 24px
+}
+
+#noteID{
+  font-size: 10px;
+}
+
+.inputBox{
+  width: 400px;
+  height: 200px;
+  margin: 15px 0px 15px 0px;
+}
+
+.inputLabel{
+  color: white;
+  font-size: 20px;
+}
+
+.inputField{
+  margin: 15px 0px 15px 0px;
+}
+
+.submitBox{
+  margin: 15px 0px 50px 0px;
+}
+/*.inputForm{
+  display: flex;
+  flex-direction: column;
+}
+
+.inputForm > div{
+  margin: 15px 0px 15px 0px;
+}*/
+
+
+
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files

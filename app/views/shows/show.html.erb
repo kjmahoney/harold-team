@@ -1,20 +1,29 @@
 <h1><%= @show.title %></h1>
 <p><%=@show.body%></p>
 
+<div class = "longList">
 <%@beat.each do |beat| %>
 
-  <ul>
+<div>
+  <p class = "listTitle"><%=link_to "#{beat.title}", team_show_beat_path(@team, @show,beat)%></p>
 
-  <%=link_to "#{beat.title}", team_show_beat_path(@team, @show,beat)%>
+  <p class = "listBody"><%=beat.body%></p>
 
-  <%beat.notes.each do |note| %>
-    <li><%=note.body%></li>
-  <%end%>
-</ul>
+  <div>
+    <%beat.notes.each do |note| %>
+      <li><%=note.body%></li>
+    <%end%>
+  </div>
+
+</div>
+
 <%end%>
+</div>
 
+<div class="bottomNav">
+  <div><%= link_to "Add Beat", new_team_show_beat_path(@team, @show) %></div>
 
-<p><%= link_to "Add Beat", new_team_show_beat_path(@team, @show) %></p>
+  <div><%= link_to "Edit show", edit_team_show_path(@team, @show) %></div>
 
-<p><%= link_to "Edit show", edit_team_show_path(@team, @show) %></p>
-<div class = "navLink"><%= link_to "Back to A ll Shows", team_shows_path %></div>
+  <div class = "navLink"><%= link_to "Back to A ll Shows", team_shows_path %></div>
+</div>

@@ -1,13 +1,27 @@
 <h1><%=@beat.title %></h1>
 <p><%=@beat.body %></p>
 
+<div class = "longList">
+
 <%@beat.notes.each do |note| %>
-  <%= note.body %>
+
+  <div class = "noteBody"><%= note.body %>
+  <li>
+  <div id = "noteID">Posted by:<%=note.user.email%> on <%=note.created_at%>
   <%= link_to "Edit this Note", edit_team_show_beat_note_path(@team, @show, @beat, note) %>
+  </div>
+  </li>
+  </div>
+
 <%end%>
 
-<p><%= link_to "Add note", new_team_show_beat_note_path(@team, @show,@beat,@path) %></p>
+</div>
 
-<p><%= link_to "Edit this Beat", edit_team_show_beat_path(@team, @show , @beat) %></p>
+
+<div class="bottomNav">
+<div><%= link_to "Add note", new_team_show_beat_note_path(@team, @show,@beat,@path) %></div>
+
+<div><%= link_to "Edit this Beat", edit_team_show_beat_path(@team, @show , @beat) %></div>
 
 <div class = "navLink"><%= link_to "Back to Show", team_show_path(@team, @show) %></div>
+</div>

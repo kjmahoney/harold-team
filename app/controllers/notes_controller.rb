@@ -31,9 +31,10 @@ class NotesController < ApplicationController
   def update
     @team = Team.find(params[:team_id])
     @show =Show.find(params[:show_id])
+    @beat= Beat.find(params[:beat_id])
     @note =Note.find(params[:id])
     @note.update(note_params)
-    redirect_to team_show_path(@team, @show)
+    redirect_to team_show_beat_path(@team, @show, @beat)
   end
 
   def destroy
