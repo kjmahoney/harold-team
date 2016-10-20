@@ -1,2 +1,7 @@
-<h1>Team#edit</h1>
-<p>Find me in app/views/team/edit.html.erb</p>
+<h1><%= @team.name %></h1>
+
+<%= render "form" %>
+
+<%= form_for @team, method: :delete, data: {confirm: "Are you sure?"} do |s|%>
+  <%= s.submit "Delete team" %>
+<% end %>

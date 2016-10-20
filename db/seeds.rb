@@ -5,16 +5,19 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Team.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('Team')
+
 Show.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('Show')
-Beat.destroy_all
-ActiveRecord::Base.connection.reset_pk_sequence!('Beat')
 Note.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('Note')
 User.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('User')
+Team.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('Team')
+Membership.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('Membership')
+Beat.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('Beat')
 
 
 
