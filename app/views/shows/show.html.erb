@@ -1,12 +1,14 @@
-<h1><%= @show.title %></h1>
-<p><%=@show.body%></p>
-<p><%=@show.date%></p>
+<h1><%=@show.date.strftime("%m %d %Y")%></h1>
+<h2>"<%= @show.title %>"</h2>
+<p>Run Time: <%=@show.length%> minutes</p>
+<p>Hot Take: <%=@show.body%></p>
 
 <div class = "longList">
+  <h2> Beats </h2>
 <%@beat.each do |beat| %>
 
 <div>
-  <p class = "listTitle"><%=link_to "#{beat.title}", team_show_beat_path(@team, @show,beat)%></p>
+  <p class = "listTitle"><h2><%=link_to "#{beat.title}", team_show_beat_path(@team, @show,beat)%></h2></p>
 
   <p class = "listBody"><%=beat.body%></p>
 
@@ -20,5 +22,5 @@
 
   <div><%= link_to "Edit show", edit_team_show_path(@team, @show) %></div>
 
-  <div class = "navLink"><%= link_to "Back to A ll Shows", team_shows_path %></div>
+  <div class = "navLink"><%= link_to "Back to All Shows", team_shows_path %></div>
 </div>

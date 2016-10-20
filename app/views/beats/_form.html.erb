@@ -1,7 +1,9 @@
 <%= form_for [@team,@show,@beat] do |b|%>
-  <%=b.label :Title%>
-  <%=b.text_field :title%>
+<div class = "inputForm">
+  <div><%=b.label :Title%>
+  <%=b.text_field :title%></div>
   <%=b.label :Body %>
-  <%=b.text_field :body%>
-  <%= b.submit "End Beat" %>
+  <%=b.text_field :body, :class => "inputBox"%>
+  <div class = "submitBox"><%= b.submit "End Beat" %></div>
+  </div>
 <% end %>
