@@ -5,13 +5,38 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-
+Team.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('Team')
 Show.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('Show')
 Beat.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('Beat')
 Note.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('Note')
+User.destroy_all
+ActiveRecord::Base.connection.reset_pk_sequence!('User')
 
-testShow = Show.create(title:"Mall Show", date:"Oct 14 2016", length:25, body: "A very good show" )
 
-testBeat = Beat.create(title: "1A", body: "Well grounded and energetic")
 
-testNote = Note.create(body:"Well grounded and energetic", private: false, beat_id: 1)
+testTeam = Team.create(name:"Richie")
+testTeam2 = Team.create(name:"Pizza")
+
+testShow1 = Show.create(title:"The Generic Show", date:"Oct 14 2016", length:25, body: "A very generic show!", team_id: 1 )
+testShow2 = Show.create(title:"The Even More Generic Show", date:"Oct 21 2016", length:25, body: "An even more generic show!", team_id: 1)
+
+testBeat1 = Beat.create(title: "1A", body: "Involved two generic people", show_id: 1)
+testBeat2 = Beat.create(title: "1B", body: "Involved two generic people", show_id: 1)
+testBeat3 = Beat.create(title: "1C", body: "Involved two generic people", show_id: 1)
+testBeat4 = Beat.create(title: "Group 1", body: "Involved two generic people", show_id: 1)
+
+testNote = Note.create(body:"I thought we could have been more generic", private: false, beat_id: 1, user_id:1)
+
+testUser = User.create(email:"kevin8@gmail.com", password:"kevin8")
+testUser = User.create(email:"aaron8@gmail.com", password:"aaron8")
+testUser = User.create(email:"betsy8@gmail.com", password:"betsy8")
+testUser = User.create(email:"katie8@gmail.com", password:"katie8")
+
+testMembership = Membership.create(team_id:1, user_id: 1)
+testMembership = Membership.create(team_id:1, user_id: 2)
+testMembership = Membership.create(team_id:1, user_id: 3)
+testMembership = Membership.create(team_id:1, user_id: 4)
