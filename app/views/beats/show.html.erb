@@ -4,7 +4,19 @@
 <div class = "longList">
 
 <%@beat.notes.each do |note| %>
+<%  if note.private = true %>
 
+  <% if current_user.id == note.user.id%>
+  <div class = "noteBody"><%= note.body %>
+  <li>
+  <div id = "noteID">Posted by:<%=note.user.email%> on <%=note.created_at%>
+  <%= link_to "Edit this Note", edit_team_show_beat_note_path(@team, @show, @beat, note) %>
+  </div>
+  </li>
+  </div>
+    <% else%>
+  <% end%>
+  <%else%>
   <div class = "noteBody"><%= note.body %>
   <li>
   <div id = "noteID">Posted by:<%=note.user.email%> on <%=note.created_at%>
@@ -13,6 +25,7 @@
   </li>
   </div>
 
+<%end%>
 <%end%>
 
 </div>

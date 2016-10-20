@@ -4,9 +4,16 @@ Rails.application.routes.draw do
   # get 'memberships/create'
   #
   # get 'users/index'
+  # get '/users/sign_out'
+  # root to: 'teams#index'
 
   devise_for :users
   root to: 'teams#index'
+
+  devise_scope :user do
+   get '/users/sign_out' => 'devise/sessions#destroy'
+end
+
 
   resources :users, only: [:index]
 

@@ -1,15 +1,21 @@
 <h1>My Teams</h1>
 
-
+<% if current_user %>
 <%@teams.each do |t|%>
-
 <ul>
   <%=link_to "#{t.name}", team_path(t)%>
 </ul>
-
-
+<% end %>
+<% else %>
+<p> "Please sign in or create an account"</p>
 <% end %>
 
+
 <div class="bottomNav">
+<%if current_user %>
+<div class = "navLink"><%= link_to "Add Player to Team", new_membership_path%></div>
+
 <div class = "addLink"><%= link_to "Add Team", new_team_path %></div>
+
+<%end%>
 </div>
