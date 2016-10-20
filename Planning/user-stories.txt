@@ -15,8 +15,6 @@ I should be able to categorize my shows by team
 
 (A team will have many users, and a user will have many teams)
 
-
-
 Gold
 
 As a coach, I should be able to view all players on a team and make notes for them, also track attendance at shows and see who
@@ -27,5 +25,4 @@ was in which beat
 
 Bonus features-
 Link to team website
-Include a ranking system
 Calendar for inputting dates
