@@ -1,11 +1,16 @@
 <h1>All Shows for <%= @team.name %></h1>
 
+<div class = "longList">
 <% @shows.each do |s| %>
 
-<%=link_to "#{s.title}", team_show_path(@team, s)%>
-
+<div>
+<%=link_to "#{s.title}", team_show_path(@team, s)%><div class = "date">"<%= s.title %>"</div>
+</div>
 <% end %>
+</div>
 
+<div class="bottomNav">
 <div class = "newLink"><%= link_to "New Show", new_team_show_path %></div>
 
 <div class = "navLink"><%= link_to "Back to Teams", teams_path %></div>
+</div>

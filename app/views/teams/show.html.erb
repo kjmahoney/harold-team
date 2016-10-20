@@ -1,11 +1,21 @@
 <h1><%= @team.name %></h1>
 
+<div class = "longList">
+
+<div><%= link_to "Shows", team_shows_path(@team) %></div>
+
+<div> <h2>Members</h2>
+
 <%@membership.each do |member| %>
-  <%= member.user.email %>
+<li>  <%= member.user.email %> </li>
 <% end %>
 
-<%= link_to "Shows", team_shows_path(@team) %>
+</div>
+</div>
 
 
 
+
+<div class="bottomNav">
 <div class = "navLink"><%= link_to "Back", teams_path%></div>
+</div>
