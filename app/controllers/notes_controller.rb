@@ -18,7 +18,7 @@ class NotesController < ApplicationController
     @show =Show.find(params[:show_id])
     @beat= Beat.find(params[:beat_id])
     @beat.notes.create!(note_params.merge(user: current_user))
-    redirect_to team_show_path(@team, @show)
+    redirect_to team_show_beat_path(@team, @show,@beat)
   end
 
   def edit
