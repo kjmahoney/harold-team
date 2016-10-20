@@ -3,7 +3,7 @@
   <head>
     <title>Harold</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -14,15 +14,21 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
-    <nav>
+    <header>
+
+      <h1 id = "headline">Harold Teams</h1>
+      <div id = "header2">
     <% if !current_user %>
-      <%= link_to "Sign up", new_user_registration_path  %>
-      <%= link_to "Sign in", new_user_session_path %>
+      <%= link_to "Sign up |", new_user_registration_path  %>
+      <%= link_to "| Sign in", new_user_session_path %>
     <%else%>
       <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
       <%current_user.email%>
     <%end%>
-    </nav>
+  </div>
+  </header>
+
+
 
     <%= yield %>
 

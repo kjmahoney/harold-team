@@ -3,6 +3,16 @@ body{
   background-color: white;
   color: white;
   font-family: Chalkboard;
+
+}
+
+h1,h2,h3{
+  font-family: 'Indie Flower', cursive;
+}
+
+#headline{
+  font-size: 40px;
+  font-family: 'Indie Flower', cursive;
 }
 
 a{
@@ -18,10 +28,19 @@ ul{
   list-style: none;
 }
 
-nav{
+header{
+  margin: 0px 0px 0px 0px;
   background-color: black;
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Indie Flower', cursive;
+  padding: 0 0 15px 0
+}
+
+.header2{
+
 }
 
 #background-img{
@@ -39,6 +58,7 @@ nav{
   align-items: center;
   justify-content: center;
   background-color: black;
+  font-family: 'Indie Flower', cursive;
 }
 
 .bottomNav > div{
@@ -50,10 +70,11 @@ nav{
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 10px 0px 50px 0px;
 }
 
 .longList>div{
-  margin: 5px 0px 5px 0px;
+  margin: 10px 0px 10px 0px;
 }
 
 .longList>div>div>li{
@@ -88,30 +109,7 @@ nav{
 .submitBox{
   margin: 15px 0px 50px 0px;
 }
-/*.inputForm{
-  display: flex;
-  flex-direction: column;
-}
 
-.inputForm > div{
-  margin: 15px 0px 15px 0px;
-}*/
-
-
-
-
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+ .noteBody{
+   margin: 15px 0px 50px 0px;
+ }
