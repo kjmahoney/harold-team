@@ -6,7 +6,7 @@ class MembershipsController < ApplicationController
   end
 
   def create
-    @membership =Membership.create!(membership_params)
+    @membership = Membership.create!(membership_params)
     redirect_to teams_path
   end
 
