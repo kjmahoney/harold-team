@@ -1,6 +1,7 @@
 class NotesController < ApplicationController
-  def index
-  end
+  # NHO: can you see a line this is repetitive in this controller?
+  # We can help DRY up this controller by using before_action methods to do common tasks such as
+  # find a team, show, beat
 
   def show
     @note = Note.find(params[:id])
@@ -8,38 +9,38 @@ class NotesController < ApplicationController
 
   def new
     @team = Team.find(params[:team_id])
-    @show =Show.find(params[:show_id])
-    @beat= Beat.find(params[:beat_id])
-    @note =Note.new
+    @show = Show.find(params[:show_id])
+    @beat = Beat.find(params[:beat_id])
+    @note = Note.new
   end
 
   def create
     @team = Team.find(params[:team_id])
-    @show =Show.find(params[:show_id])
-    @beat= Beat.find(params[:beat_id])
+    @show = Show.find(params[:show_id])
+    @beat = Beat.find(params[:beat_id])
     @beat.notes.create!(note_params.merge(user: current_user))
     redirect_to team_show_beat_path(@team, @show,@beat)
   end
 
   def edit
     @team = Team.find(params[:team_id])
-    @show =Show.find(params[:show_id])
-    @beat= Beat.find(params[:beat_id])
-    @note =Note.find(params[:id])
+    @show = Show.find(params[:show_id])
+    @beat = Beat.find(params[:beat_id])
+    @note = Note.find(params[:id])
   end
 
   def update
     @team = Team.find(params[:team_id])
-    @show =Show.find(params[:show_id])
-    @beat= Beat.find(params[:beat_id])
-    @note =Note.find(params[:id])
+    @show = Show.find(params[:show_id])
+    @beat = Beat.find(params[:beat_id])
+    @note = Note.find(params[:id])
     @note.update(note_params)
     redirect_to team_show_beat_path(@team, @show, @beat)
   end
 
   def destroy
     @team = Team.find(params[:team_id])
-    @show =Show.find(params[:show_id])
+    @show = Show.find(params[:show_id])
     @note = Note.find(params[:id])
     @note.destroy
     redirect_to team_show_path(@team, @show)
@@ -49,6 +50,4 @@ class NotesController < ApplicationController
   def note_params
     params.require(:note).permit(:body, :private)
   end
-
-
 end

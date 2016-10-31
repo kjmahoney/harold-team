@@ -1,3 +1,4 @@
+<!-- NHO: careful of you view code indendation! -->
 <h1><%=@beat.title %></h1>
 <p><%=@beat.body %></p>
 
@@ -9,6 +10,7 @@
   <% if current_user.id == note.user.id%>
   <div class = "noteBody"><%= note.body %>
   <li>
+  <!-- NHO: recommend looking into rails helper method: time_ago_in_words for displaying human readable times  -->
   <div id = "noteID">Posted by:<%=note.user.email%> on <%=note.created_at%>
   <%= link_to "Edit this Note", edit_team_show_beat_note_path(@team, @show, @beat, note) %>
   <p>Only visible to you</p>

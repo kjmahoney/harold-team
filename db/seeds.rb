@@ -19,7 +19,7 @@ ActiveRecord::Base.connection.reset_pk_sequence!('Membership')
 Beat.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('Beat')
 
-
+# NHO: nice seeds!
 
 testTeam = Team.create(name:"Richie")
 testTeam2 = Team.create(name:"Pizza")
