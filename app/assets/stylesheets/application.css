@@ -50,9 +50,6 @@ header{
   padding: 0 0 15px 0
 }
 
-.header2{
-
-}
 
 #background-img{
   height: 100%;
@@ -70,10 +67,13 @@ header{
   justify-content: center;
   background-color: black;
   font-family: 'Indie Flower', cursive;
+  position:fixed;
+    bottom:0;
+    width: 100%
 }
 
 .bottomNav > div{
-  margin: 15px 15px 5px 15px;;
+  margin: 15px 15px 5px 15px;
 }
 
 .longList{

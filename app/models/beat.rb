@@ -3,3 +3,4 @@ class Beat < ApplicationRecord
   has_many :notes, dependent: :destroy
   # , dependent: :destroy
 end
+  
